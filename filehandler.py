@@ -9,7 +9,7 @@ from student import Student
 # object->dictionary->JSON
 
 
-def save_student(students):
+def save_students(students):
     student_data = []  # Creating an empty list to store
 
     # Loop through each student object in students list
@@ -25,7 +25,7 @@ def save_student(students):
             }
         )
     try:
-        with open("student.json", "w") as file:
+        with open("students.json", "w") as file:
             json.dump(student_data, file, indent=4)
 
     except Exception as e:
@@ -39,7 +39,7 @@ def save_student(students):
 def load_students(students):  # created a function that loads student data
     # With automatically closes the file
     # Opened student.json in read mode
-    with open("student.json", "r") as file:
+    with open("students.json", "r") as file:
         student_data = json.load(file)  # Converts json data into python object
 
     return student_data
