@@ -142,7 +142,6 @@ Student Object
 The project handles common file-related exceptions such as:
 
 - FileNotFoundError
-- JSON decoding errors
 - General exceptions while reading and writing files
 
 ---
