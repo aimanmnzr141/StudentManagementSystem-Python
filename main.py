@@ -12,8 +12,8 @@ while True:
     print("4. Update Student")
     print("5. Delete Student")
     print("6. Exit")
-
     choice = int(input("Enter your choice: "))
+    print(choice, type(choice))
 
     if choice == 1:
         manager.add_student()
