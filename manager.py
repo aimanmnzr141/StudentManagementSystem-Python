@@ -1,13 +1,16 @@
 # From student.py, Student class is being imported
 from student import Student
 
+# importing functions from filehandler
+from filehandler import save_students, load_students
+
 
 class StudentManager:
 
     def __init__(self):  # Constructor for the manager
         # Creates an empty list that stores the data of all the student objects.
         # Container where many student objects will be kept
-        self.students = []
+        self.students = load_students()
 
     def add_student(self):  # Self represent the current student manager object
         student_id = int(input("Enter student id: "))
@@ -20,7 +23,7 @@ class StudentManager:
         new_student = Student(student_id, name, age, course, email)
         # Adds the new student to the manager list
         self.students.append(new_student)
-
+        save_students(self.students)
         print("Student added successfully!")
 
     def view_students(self):  # Defining the view method
@@ -66,6 +69,8 @@ class StudentManager:
                 update_student.age = int(input("Enter New Age: "))
                 update_student.course = input("Enter New Course : ")
                 update_student.email = input("Enter New Email: ")
+
+                save_students(self.students)
                 print("Student updated successfully!")
                 return
         print("Sorry! Student not found")
@@ -77,6 +82,8 @@ class StudentManager:
             # Compare each students ID with delete_id
             if del_student.student_id == delete_id:
                 self.students.remove(del_student)
+
+                save_students(self.students)
                 print("Student Deleted Successfully!")
                 return
         print("Sorry! Student not found")

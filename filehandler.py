@@ -36,10 +36,33 @@ def save_students(students):
 # JSON->dictionary->objects
 
 
-def load_students(students):  # created a function that loads student data
+def load_students():  # created a function that loads student data from the file
     # With automatically closes the file
     # Opened student.json in read mode
-    with open("students.json", "r") as file:
-        student_data = json.load(file)  # Converts json data into python object
+    try:
+        with open("students.json", "r") as file:
+            student_data = json.load(file)  # Converts json data into python object
 
-    return student_data
+        students = []
+
+        # loop through
+        for student in student_data:
+            # Converted dictionary into student object
+            new_student = Student(
+                student["student_id"],
+                student["name"],
+                student["age"],
+                student["course"],
+                student["email"],
+            )
+            # Add student object to the list
+            students.append(new_student)
+
+        return students
+
+    except FileNotFoundError:
+        return []
+
+    except Exception as e:
+        print(f"Error while loading statements! {e}")
+        return []
