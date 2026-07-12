@@ -53,14 +53,15 @@ class StudentManager:
 
         print("Sorry! Student not found")
 
-    def update_student(self) # Defining update method
+    def update_student(self):  # Defining update method
         # Asking user to enter the student id they want to update.
-        update_id = int(input("Enter student id you want to update:")) # input stored in variable update_id
+        # input stored in variable update_id
+        update_id = int(input("Enter student id you want to update:"))
         # Loop through self.students
-        for update_student in self.students:  
-            if update_student.student_id == update_id: # Comparing the id
+        for update_student in self.students:
+            if update_student.student_id == update_id:  # Comparing the id
                 print("Student Found!")
-                update_student.student_id = int(input("Enter New id:")) # Taking input from user and updating accordingly
+                # Taking input from user and updating accordingly
                 update_student.name = input("Enter New Name: ")
                 update_student.age = int(input("Enter New Age: "))
                 update_student.course = input("Enter New Course : ")
@@ -69,16 +70,13 @@ class StudentManager:
                 return
         print("Sorry! Student not found")
 
-    def delete_student(self): # Defining Delete Method
+    def delete_student(self):  # Defining Delete Method
         # Getting student id that user wants to delete
         delete_id = int(input("Enter id that you want to delete :"))
         for del_student in self.students:
-            if del_student.student_id == delete_id: #Compare each students ID with delete_id
+            # Compare each students ID with delete_id
+            if del_student.student_id == delete_id:
                 self.students.remove(del_student)
                 print("Student Deleted Successfully!")
                 return
         print("Sorry! Student not found")
-
-
-
-
