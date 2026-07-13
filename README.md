@@ -142,7 +142,6 @@ Student Object
 The project handles common file-related exceptions such as:
 
 - FileNotFoundError
-- JSON decoding errors
 - General exceptions while reading and writing files
 
 ---
@@ -160,25 +159,4 @@ The project handles common file-related exceptions such as:
 - JSON File Handling
 - Exception Handling
 
----
 
-## 🎯 Future Improvements
-
-- Input validation
-- Duplicate Student ID checking
-- Email validation
-- Sorting student records
-- Export data to CSV
-- GUI version using Tkinter
-
----
-
-## 👨‍💻 Author
-
-**Your Name**
-
----
-
-## 📜 License
-
-This project is developed for learning purposes as part of a Python assignment.
