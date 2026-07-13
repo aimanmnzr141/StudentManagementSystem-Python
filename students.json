@@ -1,1 +1,23 @@
-[]
+[
+    {
+        "student_id": 101,
+        "name": "Aiman",
+        "age": 26,
+        "course": "MCA",
+        "email": "azargar@gmail.com"
+    },
+    {
+        "student_id": 102,
+        "name": "Sana",
+        "age": 26,
+        "course": "MBA-F",
+        "email": "sanakhan@gmail.com"
+    },
+    {
+        "student_id": 103,
+        "name": "Ruvaid",
+        "age": 27,
+        "course": "MA-English",
+        "email": "ruvaid23@gmail.com"
+    }
+]
