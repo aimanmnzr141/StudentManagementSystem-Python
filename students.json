@@ -19,5 +19,12 @@
         "age": 27,
         "course": "MA-English",
         "email": "ruvaid23@gmail.com"
+    },
+    {
+        "student_id": 104,
+        "name": "Syed",
+        "age": 25,
+        "course": "Btech",
+        "email": "syed54@gmail.com"
     }
 ]
